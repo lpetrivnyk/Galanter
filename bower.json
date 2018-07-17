@@ -1,0 +1,20 @@
+{
+  "name": "Galanter",
+  "description": "Galanter - CSS and JS lib. With a set of different functions. Everything is just for your use.",
+  "main": "index.js",
+  "authors": [
+    "Liubomyr Petrivnyk"
+  ],
+  "license": "ISC",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "*",
+    "jquery": "3.*"
+  }
+}
