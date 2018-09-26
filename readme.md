@@ -17,6 +17,7 @@
 <ol>
 <li><a href="https://github.com/ukrainian199/Galanter/archive/master.zip">Download</a> <strong>optimizedhtml-template</strong> from GitHub;</li>
 <li>Install Node Modules: <strong>npm i</strong>;</li>
+<li>Install Bower plugin: <strong>bower i</strong>;</li>
 <li>Run the template: <strong>gulp</strong>.</li>
 </ol> 
 

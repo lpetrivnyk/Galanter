@@ -1,0 +1,74 @@
+.store-wrapper
+    .container-flex
+        justify-content: space-between
+        .filter-items
+            width: calc(25% - 10px)
+            // background-color: $red
+            .filter-item
+                border-bottom: 1px solid #dbdbdb
+                padding-bottom: 30px
+                margin-bottom: 30px
+                .filter-item-title
+                    text-transform: uppercase
+                    font-size: 14px
+                    font-weight: 300
+                    color: #6c6c6c
+                    margin-bottom: 15px
+                select
+                    border: 1px solid #dbdbdb
+                    border-radius: 8px
+                    padding: 10px 15px
+                    width: 100%
+                    color: #dbdbdb
+                    line-height: 1em
+                    /* for FF */
+                    background-image: url('/img/svg/chevron-down-solid.svg')
+                    background-size: 10px
+                    background-position: 95% center
+                    background-repeat: no-repeat
+                    -moz-appearance: none
+                    text-indent: 0.01px 
+                    text-overflow: ''
+                    /* for IE */
+                    -ms-appearance: none
+                    appearance: none!important
+                    
+                select::-ms-expand 
+                    display: none
+                .filter-price-box
+                    display: flex
+                    justify-content: flex-start
+                    align-items: center
+                    input
+                        height: 35px
+                        width: 70px
+                        margin: 0 10px
+                        border: 1px solid #dbdbdb
+                        border-radius: 8px
+                .filter-other-list
+                    li
+                        margin-bottom: 10px
+                        display: flex
+                        align-items: center
+                        .checkbox-wrapper
+                            margin-right: 10px
+                            input
+                            label
+                        &>label
+                            -moz-user-select: none
+                            -khtml-user-select: none
+                            user-select: none
+
+        .store-items
+            width: calc(75% - 10px)
+            display: flex
+            justify-content: space-between
+            flex-wrap: wrap
+            .product-item
+                width: calc(33.333% - 12px)
+                margin-bottom: 20px
+        .download-more
+            width: 100%
+            display: flex
+            justify-content: center
+            margin: 0px 0

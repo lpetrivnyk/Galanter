@@ -1,0 +1,137 @@
+// Base style
+
+input[type='number'],
+input[type='text']
+    text-indent: 15px
+.input-box 
+    position: relative
+    width: auto
+    height: 35px
+
+    input 
+        width: 100%
+        height: 100%
+        font-size: 12px
+        color: #dbdbdb
+        background-color: #fff
+        font-family: "Roboto", sans-serif
+        font-weight: 500
+        text-indent: 15px
+        box-shadow: 0 0 15px rgba(0, 0, 0, .2)
+        &::-webkit-input-placeholder,
+        &::-moz-placeholder,
+        &:-ms-input-placeholder,
+        &::-ms-input-placeholder,
+        &::placeholder
+            color: #dbdbdb
+
+
+    label 
+        position: absolute
+        height: 50%
+        margin: auto
+        top: 0
+        bottom: 0
+        left: 0
+        color: #ececec
+        font-size: 12px
+        font-weight: 500
+        opacity: 0
+        z-index: -1
+        transition: $transition
+
+
+// .input-box input:focus+label,
+.input-box input:focus:not(:placeholder-shown)+label,
+.input-box input:not(:placeholder-shown)+label 
+    bottom: auto
+    top: -17px
+    -webkit-transition: all .4s ease
+    -o-transition: all .4s ease
+    transition: all .4s ease
+    opacity: 1
+    z-index: 1
+
+.title-section
+    font-weight: bold
+    font-size: 48px
+    color: #6c6c6c
+    // border-left: 10px solid $red
+    padding: 20px 30px
+    text-transform: uppercase
+    position: relative
+    &::before
+        content: ''
+        display: block
+        position: absolute
+        width: 10px
+        height: calc(100% - 40px)
+        top: 0
+        bottom: 0
+        margin: auto
+        left: 0
+        border-radius: 15px
+        background-color: $red
+.slick-dots
+    position: absolute
+    bottom: -140px
+    display: block
+    width: 100%
+    padding: 0
+    margin: 0
+    list-style: none
+    text-align: center
+    li
+        position: relative
+        display: inline-block
+        width: 10px
+        height: 10px
+        margin: 0 3px
+        padding: 0
+        cursor: pointer
+        button 
+            font-size: 0
+            line-height: 0
+            display: block
+            width: 10px
+            height: 10px
+            cursor: pointer
+            color: transparent
+            border: 0
+            outline: none
+            background: transparent
+
+            &:before 
+                content: ''
+                position: absolute
+                top: 0
+                left: 0
+                border-radius: 3px
+                width: 10px
+                height: 10px
+                text-align: center
+                opacity: .25
+                background-color: #6c6c6c
+            
+
+        &.slick-active button:before 
+            opacity: 1
+            background-color: #6c6c6c
+.checkbox-wrapper
+    width: 10px
+    height: 10px
+    position: relative
+    input
+        opacity: 0
+    label
+        position: absolute
+        width: 100%
+        height: 100%
+        border: 1px solid #dbdbdb
+        top: 0
+        left: 0
+        border-radius: 2px
+        transition: $transition
+    input:checked + label
+        background: #dbdbdb
+        transition: $transition

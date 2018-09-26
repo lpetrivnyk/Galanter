@@ -27,7 +27,7 @@ var path = {
     src: { 
         html: 'src/*.html', 
         js: 'src/js/main.js',
-        style: 'src/style/main.scss',
+        style: 'src/style/main.sass',
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
     },
@@ -35,7 +35,7 @@ var path = {
     watch: { 
         html: 'src/**/*.html',
         js: 'src/js/**/*.js',
-        style: 'src/style/**/*.scss',
+        style: 'src/style/**/*.sass',
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
     },
@@ -49,7 +49,7 @@ var config = {
     tunnel: true,
     host: 'localhost',
     port: 9000,
-    logPrefix: "Frontend_Devil"
+    logPrefix: "galanter"
 };
 
 // HTML file build.

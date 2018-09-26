@@ -1,0 +1,114 @@
+.product-item
+    width: 100%
+    box-shadow: 0 0 15px rgba(0, 0, 0, .2)
+    border-radius: 30px
+    border: 1px solid #DBDBDB
+    background-color: white
+    overflow: hidden
+    position: relative
+    .product-image
+        display: block
+        width: auto
+        height: 300px
+        margin: 10px auto 0
+        background-position: center
+        background-repeat: no-repeat
+        // background-size: cover
+    .product-content
+        margin-top: 10px
+        padding: 10px 20px
+        width: 100%
+        border-top: 2px solid #DBDBDB
+
+        .product-title
+            display: block
+            color: $red
+            font-weight: bold
+            font-size: 16px
+            text-transform: uppercase
+            text-align: center
+        .product-options
+            display: flex
+            justify-content: space-between
+            margin-top: 15px
+            li
+                i
+                    color: #dbdbdb
+                    transition: $transition
+                &:hover
+                    i
+                        color: $red
+                        transition: $transition
+                &.product-price
+                    color: #6c6c6c
+                    font-weight: normal
+                    font-size: 12px
+                    b
+                        font-size: 14px
+                        font-weight: bold
+                        sup
+                            font-size: 10px
+                            margin-left: -3px
+                            margin-right: -1px
+                            font-weight: normal
+    .product-link
+        display: flex
+        justify-content: center
+        align-items: center
+        font-size: 36px
+        color: $red
+        position: absolute
+        width: 100%
+        height: 320px
+        top: 0
+        left: 0
+        right: 0
+        z-index: 5
+        i
+            transform: scale(0)
+            opacity: 0
+            transition: all .6s ease .2s
+    &:hover .product-link i
+        opacity: 1
+        transform: scale(1)
+        transition: all .6s ease .2s
+    &::before 
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        height: 320px
+        width: 100%
+        border-top-left-radius: 28px
+        border-top-right-radius: 28px
+        background: #6c6c6c
+        transform: scale(0)
+        transition: all .5s ease
+
+    &:hover::before 
+        opacity: .5
+        transform: scale(1)
+
+    &:after 
+        content: ""
+        position: absolute
+        top: 10px
+        left: 10px
+        right: 10px
+        height: 300px
+    
+        border-top-left-radius: 25px
+        border-top-right-radius: 25px
+        border: 1px solid #6c6c6c
+        background: #6c6c6c
+        opacity: 0
+        transform: scale(0)
+        transition: all .6s ease .2s
+
+    &:hover:after 
+        opacity: .35
+        transform: scale(1)
+
+
+
