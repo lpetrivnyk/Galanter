@@ -1,5 +1,7 @@
 // Menu
 .full-menu
+    position: fixed
+    z-index: 2
     width: 100%
     background: #000
     .container-flex
@@ -9,6 +11,7 @@
     .first-wrapper-menu
         height: 95px
         background-color: #fff
+        transition: max-height 0.15s ease-in
         .phone-items
             display: flex
             margin-right: 20%
@@ -88,3 +91,144 @@
         display: flex
         height: 95px
         background-color: #ececec
+        .container-flex
+            justify-content: flex-start
+        .wrapper-products-menu
+            position: relative
+            padding-left: 50px
+            width: 30%
+            max-width: 360px
+            background-color: #dbdbdb
+            height: 100%
+            display: flex
+            align-items: center
+            p
+                display: flex
+                align-items: center
+                text-transform: uppercase
+                color: #6c6c6c
+                font-weight: bold
+                font-size: 14px
+                cursor: pointer
+                i
+                    color: $red
+                    margin-right: 25px
+                    font-size: 22px
+                &:hover + .list-menu-items
+                    transform: scaleY(1)
+            .list-menu-items
+                position: absolute
+                top: 95px
+                left: 0
+                width: 100%
+                z-index: 22
+                background: #ececec
+                transform: scaleY(0)
+                transform-origin: top
+                transition: transform 0.4s ease
+                li
+                    padding: 20px 0
+                    color: #6c6c6c
+                    border-bottom: 1px solid $red
+                    margin: 0 40px
+                    &:last-child
+                        border-color: transparent
+            &:hover 
+                .list-menu-items
+                    transform: scaleY(1)
+        .wrapper-search
+            display: flex
+            position: relative
+            width: 35%
+            img
+                position: absolute
+                height: 220px
+                top: -140px
+                left: -110px
+            .search-box
+                width: calc(100% - 10px)
+                height: 45px
+                // padding-left: 30px
+                input
+                    width: 100%
+                    height: 100%
+                    border-radius: 8px
+                    font-size: 12px
+                    color: #dbdbdb
+                    background-color: #fff
+                    font-family: "Roboto", sans-serif
+                    font-weight: 500
+                    text-indent: 25%
+                    padding-right: 10px
+                    box-shadow: 0 0 15px rgba(0, 0, 0, .2)
+                    &::-webkit-input-placeholder,
+                    &::-moz-placeholder,
+                    &:-ms-input-placeholder,
+                    &::-ms-input-placeholder,
+                    &::placeholder
+                        color: #dbdbdb
+                label
+                    position: absolute
+                    color: #dbdbdb
+                    z-index: 2
+                    right: 30px
+                    top: 0
+                    cursor: pointer
+                    bottom: 0
+                    margin: auto
+                    height: 15px
+        .wrapper-button-speed
+            display: flex
+            width: 35%
+            justify-content: space-between
+            height: 100%
+            align-items: center
+            .button-speed-item
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 25%
+                height: 50%
+                border-right: 1px solid $red
+                position: relative
+                &:first-child
+                    border-left: 1px solid $red
+                &:hover
+                    .lang-items
+                        opacity: 1
+                        // transform-origin: top
+                        transition: transform 0.4s ease
+                        transform: scaleY(1)
+                
+        .lang-items
+            transform: scaleY(0)
+            transform-origin: top
+            transition: transform 0.4s ease
+            position: absolute
+            // opacity: 0
+            background: #ececec
+            left: 0
+            width: 100%
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            top: 100%
+            .lang-item
+                height: 30px
+        .link-lang
+.small-menu
+    
+    .first-wrapper-menu
+        height: 0
+        transition: max-height 0.15s ease-out
+        display: none
+    .second-wrapper-menu
+        .wrapper-search
+            img
+                height: 105px
+                top: -30px
+                left: -55px
+            .search-box
+                input
+                    text-indent: 15%
